@@ -1,0 +1,55 @@
+.container form label .logo-image-preview {
+    width: 100px;
+    height: 100px;
+    border-radius: 0.5rem;
+    object-fit: cover;
+}
+
+.container form .logo-images-label #imagePreview img {
+    margin: 0 10px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}
+
+
+
+input[type="checkbox"] {
+    position: relative;
+    width: 50px;
+    height: 25px;
+    -webkit-appearance: none;
+    appearance: none;
+    background: #bebebe;
+    outline: none;
+    border-radius: 2rem;
+    cursor: pointer;
+    /* box-shadow: inset 0 0 5px rgb(0 0 0 / 50%); */
+    margin: 0 10px;
+}
+  
+  input[type="checkbox"]::before {
+    content: "";
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #d6d6d6;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+  }
+  
+  input[type="checkbox"]:checked::before {
+    transform: translateX(100%);
+    background: #fff;
+  }
+  
+  input[type="checkbox"]:checked {
+    background-image: linear-gradient(195deg, #EC407A 0%, #D81B60 100%);
+  }
+  
+
+  .color-example{
+    color: red;
+    font-size: 12px;
+  }

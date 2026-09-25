@@ -1,0 +1,1176 @@
+{
+	"info": {
+		"_postman_id": "48e97d3a-c894-4a69-974d-051dfc9e4c12",
+		"name": "Tech",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "46151806",
+		"_collection_link": "https://mustafagamel.postman.co/workspace/CEO-Workspace~7ee3c39c-8a90-4fe4-8f68-5da69835b8b6/collection/46151806-48e97d3a-c894-4a69-974d-051dfc9e4c12?action=share&source=collection_link&creator=46151806"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Auth",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "phone",
+									"value": "01098091004",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123123123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}login",
+							"host": [
+								"{{url}}login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "phone",
+									"value": "01098091004",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123123123",
+									"type": "text"
+								},
+								{
+									"key": "full_name",
+									"value": "Mustafa Gamal",
+									"type": "text"
+								},
+								{
+									"key": "avatar",
+									"type": "file",
+									"src": "/home/mustafagameel/Downloads/Image/d45aeba2-09ca-4701-aa8c-621e742c459e.jpeg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}register",
+							"host": [
+								"{{url}}register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cart",
+			"item": [
+				{
+					"name": "Add or Store To Cart",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "2|InrYfqCJgRiFusfSNa7mLzB4ECZjSfj72Hwjo0cC513e2b4c",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "product_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}carts",
+							"host": [
+								"{{url}}carts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Auth User Cart",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "3|lErRRfYx9DykLs3z8uJCmxRpnwuscGU6OwIDRMcf7b6f4364",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}carts",
+							"host": [
+								"{{url}}carts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Cart",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "4|fFQnhPvrHDosF15e9MYiX0jDlR8iwFPS47GcXzDFc19bfd08",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "product_id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "quantity",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}carts/2",
+							"host": [
+								"{{url}}carts"
+							],
+							"path": [
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete item from cart",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "1|5u74dj8Xsy7k2i7OUCPU5YjYImfiR0UsqG9y1Reee9ea368b",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}carts/1",
+							"host": [
+								"{{url}}carts"
+							],
+							"path": [
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Check Coupon",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "6|cCnutPsRxhvQwWWIjYurdvW5Kljpwgtlsd7YU4o2cd6d3140",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "coupon",
+									"value": "fAF34fd",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}carts/check/coupon",
+							"host": [
+								"{{url}}carts"
+							],
+							"path": [
+								"check",
+								"coupon"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Slider",
+			"item": [
+				{
+					"name": "All Sliders",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "1|d8ZdMaHegkd6ETUKSMsN3xT3SqzSwfXiuyI3ysC1221597f1",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}sliders",
+							"host": [
+								"{{url}}sliders"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Category",
+			"item": [
+				{
+					"name": "Get All",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "1|d8ZdMaHegkd6ETUKSMsN3xT3SqzSwfXiuyI3ysC1221597f1",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}categories",
+							"host": [
+								"{{url}}categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show Category",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "1|d8ZdMaHegkd6ETUKSMsN3xT3SqzSwfXiuyI3ysC1221597f1",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}categories/1",
+							"host": [
+								"{{url}}categories"
+							],
+							"path": [
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Offer",
+			"item": [
+				{
+					"name": "Get All",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "1|d8ZdMaHegkd6ETUKSMsN3xT3SqzSwfXiuyI3ysC1221597f1",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}offers",
+							"host": [
+								"{{url}}offers"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Profile",
+			"item": [
+				{
+					"name": "Auth User Data",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "4|B3iOz5YKRXRDZSTSSm42jEQ9ZorwbhVpLP6dWHRE3c31d83d",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}profiles",
+							"host": [
+								"{{url}}profiles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "1240|aeP8v9unnLyymdBKCqXShm3SAXCkn21b8Is9Gdo59da1f69b",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "phone",
+									"value": "01098091004",
+									"type": "text"
+								},
+								{
+									"key": "full_name",
+									"value": "Mustafa Gamal2",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "test@email.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "123123123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}profiles",
+							"host": [
+								"{{url}}profiles"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "About",
+			"item": [
+				{
+					"name": "Get About",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "4|B3iOz5YKRXRDZSTSSm42jEQ9ZorwbhVpLP6dWHRE3c31d83d",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}about",
+							"host": [
+								"{{url}}about"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Contact",
+			"item": [
+				{
+					"name": "Store",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "7|hE7aLytW4psdzwnTeky2UZPse6lMbfFmKh5p7ophb4ba6c23",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "test",
+									"type": "text"
+								},
+								{
+									"key": "mobile",
+									"value": "01098091004",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "mustafa@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "رسالة تواصل",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}contacts",
+							"host": [
+								"{{url}}contacts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "4|B3iOz5YKRXRDZSTSSm42jEQ9ZorwbhVpLP6dWHRE3c31d83d",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}contacts/1",
+							"host": [
+								"{{url}}contacts"
+							],
+							"path": [
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Auth User Contacts",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "4|B3iOz5YKRXRDZSTSSm42jEQ9ZorwbhVpLP6dWHRE3c31d83d",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}contacts",
+							"host": [
+								"{{url}}contacts"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Address",
+			"item": [
+				{
+					"name": "Store",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "2|InrYfqCJgRiFusfSNa7mLzB4ECZjSfj72Hwjo0cC513e2b4c",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "first_name",
+									"value": "Mustafa",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "Gamal",
+									"type": "text"
+								},
+								{
+									"key": "mobile",
+									"value": "01098091004",
+									"type": "text"
+								},
+								{
+									"key": "country_code",
+									"value": "EG",
+									"type": "text"
+								},
+								{
+									"key": "city",
+									"value": "cairo",
+									"type": "text"
+								},
+								{
+									"key": "street",
+									"value": "cairo",
+									"type": "text"
+								},
+								{
+									"key": "build",
+									"value": "22",
+									"type": "text"
+								},
+								{
+									"key": "floor",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "apartment",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "active",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}addresses",
+							"host": [
+								"{{url}}addresses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "1|9iXx3BwassCW2lLl4nlwH1RNdsdNOOGoUNBCKC20b6222736",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "first_name",
+									"value": "Mustafa",
+									"type": "text"
+								},
+								{
+									"key": "last_name",
+									"value": "Gamal",
+									"type": "text"
+								},
+								{
+									"key": "mobile",
+									"value": "01098091004",
+									"type": "text"
+								},
+								{
+									"key": "country_code",
+									"value": "EG",
+									"type": "text"
+								},
+								{
+									"key": "city",
+									"value": "cairo",
+									"type": "text"
+								},
+								{
+									"key": "street",
+									"value": "cairo",
+									"type": "text"
+								},
+								{
+									"key": "build",
+									"value": "22",
+									"type": "text"
+								},
+								{
+									"key": "floor",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "apartment",
+									"value": "9",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}addresses/1",
+							"host": [
+								"{{url}}addresses"
+							],
+							"path": [
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "1|9iXx3BwassCW2lLl4nlwH1RNdsdNOOGoUNBCKC20b6222736",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}addresses/1",
+							"host": [
+								"{{url}}addresses"
+							],
+							"path": [
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "1|9iXx3BwassCW2lLl4nlwH1RNdsdNOOGoUNBCKC20b6222736",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}addresses",
+							"host": [
+								"{{url}}addresses"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Show",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "1|9iXx3BwassCW2lLl4nlwH1RNdsdNOOGoUNBCKC20b6222736",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}addresses/1",
+							"host": [
+								"{{url}}addresses"
+							],
+							"path": [
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Refund",
+			"item": [
+				{
+					"name": "Refund Order item",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "7|hE7aLytW4psdzwnTeky2UZPse6lMbfFmKh5p7ophb4ba6c23",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "orderitem_id",
+									"value": "17",
+									"type": "text"
+								},
+								{
+									"key": "note",
+									"value": "خامة سيئة",
+									"type": "text"
+								},
+								{
+									"key": "payment_method",
+									"value": "digital_wallet",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}refunds",
+							"host": [
+								"{{url}}refunds"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Refund orders items",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "6|cCnutPsRxhvQwWWIjYurdvW5Kljpwgtlsd7YU4o2cd6d3140",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}refunds",
+							"host": [
+								"{{url}}refunds"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Order",
+			"item": [
+				{
+					"name": "Get All Complete Orders",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "8|98viMg2lsP7hfO7aqrYwKpdJXxlEMkCYuMY1m7Dn1600efd7",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{url}}orders",
+							"host": [
+								"{{url}}orders"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Checkout",
+			"item": [
+				{
+					"name": "Store",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "8|98viMg2lsP7hfO7aqrYwKpdJXxlEMkCYuMY1m7Dn1600efd7",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "address_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}checkouts",
+							"host": [
+								"{{url}}checkouts"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Setting",
+			"item": [
+				{
+					"name": "Get Setting",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}settings",
+							"host": [
+								"{{url}}settings"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Child Category",
+			"item": [
+				{
+					"name": "Show",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{url}}childcategories/3",
+							"host": [
+								"{{url}}childcategories"
+							],
+							"path": [
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

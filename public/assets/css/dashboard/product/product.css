@@ -1,0 +1,182 @@
+.container form label .product-image-preview {
+    width: 100px;
+    height: 100px;
+    border-radius: 0.5rem;
+    object-fit: cover;
+}
+
+.container form .product-images-label #imagePreview img {
+    margin: 0 10px;
+    object-fit: cover;
+}
+
+body {
+    background-color: #000
+}
+
+.card {
+    border: none
+}
+
+.product {
+    background-color: #fafafa;
+    border-radius: 0.5rem;
+}
+
+.brand {
+    font-size: 13px
+}
+
+.act-price {
+    color: red;
+    font-weight: 700
+}
+
+.dis-price {
+    text-decoration: line-through
+}
+
+.about {
+    font-size: 14px
+}
+
+.color {
+    margin-bottom: 10px
+}
+/* form tab */
+.details-tabs-container{
+    width: 100%;
+    padding: 10px;
+    height: 60px;
+    background-image: linear-gradient(195deg, #EC407A 0%, #D81B60 100%);
+    border-radius: 5px;
+}
+.details-tabs-container .details-tabs-content{
+    width: 100%;
+}
+.details-tabs-container .details-tabs-content .details-tabs-content-list-items{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+.details-tabs-container .details-tabs-content .details-tabs-content-list-items .details-tabs-content-item{
+    width: calc(100% / 4);
+}
+.details-tabs-container .details-tabs-content .details-tabs-content-list-items .details-tabs-content-item button{
+    width: 100%;
+    background-image: linear-gradient(195deg, #d6396d 0%, #c01c58 100%);
+}
+
+/* form input */
+label.radio {
+    cursor: pointer
+}
+
+label.radio input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    pointer-events: none
+}
+
+label.radio span {
+    padding: 2px 9px;
+    border: 2px solid #ff0000;
+    display: inline-block;
+    color: #ff0000;
+    border-radius: 3px;
+    text-transform: uppercase
+}
+
+label.radio input:checked+span {
+    border-color: #ff0000;
+    background-color: #ff0000;
+    color: #fff
+}
+
+.btn-danger {
+    background-color: #ff0000 !important;
+    border-color: #ff0000 !important
+}
+
+.btn-danger:hover {
+    background-color: #da0606 !important;
+    border-color: #da0606 !important
+}
+
+.btn-danger:focus {
+    box-shadow: none
+}
+
+.cart i {
+    margin-right: 10px
+}
+.text-center  #main-image{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 0.5rem;
+}
+.text-center img.small{
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 0.5rem;
+}
+.thumbnail{
+    margin: 10px 0;
+    background-color: #eee;
+    padding: 5px 0;
+    border-radius: 0.5rem;
+}
+.product .user-price{
+    padding: 5px;
+    border-radius: 5px;
+    border-bottom: 1px solid #d4d2d2;
+    
+}
+.product .user-price h5{
+    padding: 5px 0;
+}
+.product .trader-price{
+    padding: 5px;
+    border-radius: 5px;
+    border-bottom: 1px solid #d4d2d2;
+}
+.product .trader-price h5{
+    padding: 5px 0;
+}
+.tox .tox-statusbar{
+    display: none !important;
+}
+
+
+.price-input,.details-input{
+    display: none;
+}
+.next-form-input-tab{
+    transform: rotate(180deg);
+}
+
+.header-route-btn-container .header-action{
+    width: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+}
+.header-route-btn-container .header-action form .input-group{
+    width: 300px;
+}
+
+table thead tr th{
+    cursor: pointer;
+    padding: 5px 0 !important;
+    user-select: none;
+}
+.form-switch .form-check-input:checked{
+    background-color: green !important;
+    border-color: green !important;
+}
